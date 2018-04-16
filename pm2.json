@@ -1,20 +1,20 @@
 {
 	"apps": [{
 		"name": "nvui",
-		"script": "build/dev-server.js",
+		"script": "build/linux-server.js",
 		"exec_mode": "fork",
 		"max_memory_restart": "100M",
 		"autorestart": true,
 		"node_args": [],
 		"args": [],
 		"env": {
-			"PORT": 8080,
+			"PORT": 8088,
             "NODE_ENV": "production"
 		},
 		"log_date_format": "YYYY-MM-DD HH:mm Z",
-		"error_file": "log/mstore_error.log",
-		"out_file": "log/mstore_out.log",
-		"pid_file": "pids/mstore_pip.pid",
+		"error_file": "log/nvui_error.log",
+		"out_file": "log/nvui_out.log",
+		"pid_file": "pids/nvui_pip.pid",
 		"instances": 1,
 		"min_uptime": "200s",
 		"max_restarts": 10,

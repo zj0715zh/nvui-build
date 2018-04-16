@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
+// const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -96,12 +96,12 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    new PrerenderSpaPlugin(
-      // 赋予单页面文件绝对路径
-      path.join(__dirname, '../dist'),
-      // 渲染的路由列表
-      [ '/']
-    )
+    // new PrerenderSpaPlugin(
+    //   // 赋予单页面文件绝对路径
+    //   path.join(__dirname, '../dist'),
+    //   // 渲染的路由列表
+    //   [ '/']
+    // )
   ]
 })
 

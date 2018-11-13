@@ -1,4 +1,4 @@
-# LoadingBar 加载进度条
+# LoadingBar 加载进度条  <a href='#/update?name=loading-bar'>编辑</a>
 ----
 全局创建了一个用于显示页面加载、异步请求的加载进度条。
 因为可复用性的关系，```LoadingBar``` 只会全局创建一个实例，而且在 ```Vue.prototype``` 中添加了全局对象 ```$Loading```，可以直接通过 ```this.$Loading``` 操作实例
@@ -47,18 +47,18 @@
     }
   }
 </script>
-<div class="demo-block">
-   <w-button @click="start">开始</w-button>
-   <w-button @click="end">结束</w-button>
-   <w-button @click="error">错误</w-button>
+<div class='demo-block'>
+   <w-button @click='start'>开始</w-button>
+   <w-button @click='end'>结束</w-button>
+   <w-button @click='error'>错误</w-button>
 </div>
 
 ::: demo
 
 ```html
-<w-button @click="start">开始</w-button>
-<w-button @click="end">结束</w-button>
-<w-button @click="error">错误</w-button>
+<w-button @click='start'>开始</w-button>
+<w-button @click='end'>结束</w-button>
+<w-button @click='error'>错误</w-button>
 <script>
   export default{
     methods: {
@@ -81,20 +81,20 @@
 ### 常规配置
 提供 LoadingBar 的全局配置，使用方法如下：
 
-<div class="demo-block">
-   <w-button @click="setSpeed">设置speed速度</w-button>
-   <w-button @click="setSpinner">设置spinner动画效果</w-button>
-   <w-button @click="setPercentNum">设置percentNum每次加载的比例</w-button>
-   <w-button @click="setShowSpinner">设置是否显示spinner</w-button>
+<div class='demo-block'>
+   <w-button @click='setSpeed'>设置speed速度</w-button>
+   <w-button @click='setSpinner'>设置spinner动画效果</w-button>
+   <w-button @click='setPercentNum'>设置percentNum每次加载的比例</w-button>
+   <w-button @click='setShowSpinner'>设置是否显示spinner</w-button>
 </div>
 
 ::: demo
 
 ```html
-<w-button @click="setSpeed">设置speed速度</w-button>
-<w-button @click="setSpinner">设置spinner动画效果</w-button>
-<w-button @click="setPercentNum">设置percentNum每次加载的比例</w-button>
-<w-button @click="setShowSpinner">设置是否显示spinner</w-button>
+<w-button @click='setSpeed'>设置speed速度</w-button>
+<w-button @click='setSpinner'>设置spinner动画效果</w-button>
+<w-button @click='setPercentNum'>设置percentNum每次加载的比例</w-button>
+<w-button @click='setShowSpinner'>设置是否显示spinner</w-button>
 <script>
   export default{
     methods: {

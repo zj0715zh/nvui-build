@@ -23,3 +23,4 @@ gulp.task('build', ['compile', 'copyfont']);
 gulp.task('watch', function () {
   gulp.watch('./src/*.css', ['compile']);
 });
+gulp.task('default', ['compile','copyfont']);

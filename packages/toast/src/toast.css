@@ -1,0 +1,29 @@
+.nvui_toast{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.nvui_toast .mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.3);
+}
+.nvui_toast .text{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  line-height: 20px;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background: #666;
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  padding: 10px 20px;
+}

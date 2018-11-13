@@ -9,6 +9,8 @@ if (!process.env.NODE_ENV) {
 const opn = require('opn')
 const path = require('path')
 const express = require('express')
+var routes = require('../route/index');
+var bodyParser = require('body-parser')
 const webpack = require('webpack')
 const proxyMiddleware = require('http-proxy-middleware')
 const webpackConfig = (process.env.NODE_ENV === 'testing' || process.env.NODE_ENV === 'production')
@@ -51,9 +53,20 @@ Object.keys(proxyTable).forEach(function (context) {
 // 本地服务中间件
 app.use(devMiddleware)
 
+
+app.use(bodyParser.urlencoded({extended:false}))//接受form表单提交的数据
+app.use(bodyParser.json())//接受json数据格式提交的数据
+
 // 静态文件配置
 const staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
+
+//接口路由
+app.get('/getLeftNav',routes.getLeftNav)
+app.post('/add',routes.add)
+app.post('/getComponentByType',routes.getComponentByType)
+app.post('/getComponentByName',routes.getComponentByName)
+app.post('/updateComponent',routes.updateComponent)
 
 const uri = 'http://localhost:' + port
 

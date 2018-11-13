@@ -1,15 +1,15 @@
-# Limit 限制输入域
+# Limit 限制输入域  <a href='#/update?name=limit-textarea'>编辑</a>
 ----
 ### 基础用法
 Limit 可以控制用户输入的字符数，```placeholder``` 指定初始输入的提示文案
-<div class="demo-block">
-<w-limit :maxLen="10" placeholder="最多输入10个字符"></w-limit>
+<div class='demo-block'>
+<w-limit :maxLen='10' placeholder='最多输入10个字符'></w-limit>
 </div>
 
 ::: demo
 ```html
 
-<w-limit v-mode="content" :max-len="10" placeholder="最多输入10个字符"></w-limit>
+<w-limit v-mode='content' :max-len='10' placeholder='最多输入10个字符'></w-limit>
 
 ```
 :::
@@ -18,14 +18,14 @@ Limit 可以控制用户输入的字符数，```placeholder``` 指定初始输�
 ### 裁剪超出字符
 如果超过了限制的字符数，超过部分进行裁剪
 
-<div class="demo-block">
-<w-limit :max-len="10" placeholder="最多输入10个字符" isCut></w-limit>
+<div class='demo-block'>
+<w-limit :max-len='10' placeholder='最多输入10个字符' isCut></w-limit>
 </div>
 
 ::: demo
 ```html
 
-<w-limit v-mode="content" :max-len="10" placeholder="最多输入10个字符" is-cut></w-limit>
+<w-limit v-mode='content' :max-len='10' placeholder='最多输入10个字符' is-cut></w-limit>
 
 ```
 :::
@@ -33,15 +33,15 @@ Limit 可以控制用户输入的字符数，```placeholder``` 指定初始输�
 ### 列高
 通过 ```rows``` 属性指定```limit```的高度
 
-<div class="demo-block">
-<w-limit :max-len="10" :rows="3" placeholder="最多输入10个字符" is-cut></w-limit>
+<div class='demo-block'>
+<w-limit :max-len='10' :rows='3' placeholder='最多输入10个字符' is-cut></w-limit>
 </div>
 
 
 :::demo
 ```html
 
-<w-limit :max-len="10" :rows="3" placeholder="最多输入10个字符" is-cut></w-limit>
+<w-limit :max-len='10' :rows='3' placeholder='最多输入10个字符' is-cut></w-limit>
 
 ```
 :::

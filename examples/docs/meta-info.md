@@ -1,4 +1,4 @@
-# MetaInfo 三要素管理
+# MetaInfo 三要素管理  <a href='#/update?name=meta-info'>编辑</a>
 ----
 `vue-meta-info` 是一个基于[vue 2.0](https://vuejs.org)的插件，它会让你更好的管理你的 app 里面的 meta 信息。你可以直接
 在组件内设置 metaInfo 便可以自动挂载到你的页面中。如果你需要随着数据的变化，自动更新你的title、meta等信息，那么用此
@@ -7,7 +7,7 @@
 > 更多使用介绍：[处理seo的另一种思路](https://zhuanlan.zhihu.com/p/29148760?group_id=890298677627879424)
 ### 常规用法
 
-<div class="demo-block">
+<div class='demo-block'>
   <p>打开控制台，看看这个页面的 title, meta, 和 link 哦，是不是发生了变化</p>
 </div>
 
@@ -36,7 +36,7 @@ export default {
 
 ### async 异步加载
 
-<div class="demo-block">
+<div class='demo-block'>
   <p>如果你的title或者meta或者link是异步加载的，那么你可能需要这样使用</p>
 </div>
 

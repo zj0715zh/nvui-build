@@ -1,0 +1,52 @@
+.sdk_dialog {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sdk_dialog .mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.sdk_dialog .content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  line-height: 20px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 5px;
+  font-size: 14px;
+  color: #384369;
+  background: #fff;
+  width: auto;
+  height: auto;
+  max-width: 80%;
+}
+.sdk_dialog .content .title {
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  line-height: 60px;
+}
+.sdk_dialog .content .dialogBox {
+  padding: 10px 20px;
+}
+.sdk_dialog .content .btn_group {
+  border-top: 1px solid #ececec;
+}
+.sdk_dialog .content .btn_group a {
+  float: left;
+  width: 49%;
+  line-height: 50px;
+  text-decoration: none;
+  color: #5179f3;
+  text-align: center;
+  font-size: 17px;
+}
+.sdk_dialog .content .btn_group .cancel {
+  border-right: 1px solid #ececec;
+}

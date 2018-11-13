@@ -21,6 +21,12 @@
       "type": "pages"
     },
     {
+      "name": "add",
+      "path": "/add",
+      "desc": "组件录入",
+      "type": "pages"
+    },
+    {
       "name": "logs",
       "path": "/logs",
       "desc": "更新日志"

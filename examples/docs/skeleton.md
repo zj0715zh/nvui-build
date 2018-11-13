@@ -1,23 +1,23 @@
-# skeleton 骨架屏
+# Skeleton 骨架屏  <a href='#/update?name=skeleton'>编辑</a>
 ----
 ## 骨架屏样式组件
 当文本没有加载出来时，显示文本的默认占位图。
 
-<div class="demo-block">
+<div class='demo-block'>
   <w-row>
-    <w-col :span="4">
+    <w-col :span='4'>
       <w-skeleton></w-skeleton>
     </w-col>
-    <w-col :span="4" class="ml-10">
+    <w-col :span='4' class='ml-10'>
       <w-row>
-        <w-col :span="12">
-          <w-skeleton :proportion="0.2"></w-skeleton>
+        <w-col :span='12'>
+          <w-skeleton :proportion='0.2'></w-skeleton>
         </w-col>
-        <w-col :span="24" class="m-10">
-          <w-skeleton :proportion="0.1"></w-skeleton>
+        <w-col :span='24' class='m-10'>
+          <w-skeleton :proportion='0.1'></w-skeleton>
         </w-col>
-        <w-col :span="24" class="m-10">
-          <w-skeleton :proportion="0.1"></w-skeleton>
+        <w-col :span='24' class='m-10'>
+          <w-skeleton :proportion='0.1'></w-skeleton>
         </w-col>                  
       </w-col>  
     </w-col>
@@ -27,19 +27,19 @@
 ::: demo
 ```html
 <w-row>
-    <w-col :span="4">
+    <w-col :span='4'>
       <w-skeleton></w-skeleton>
     </w-col>
-    <w-col :span="4" class="ml-10">
+    <w-col :span='4' class='ml-10'>
       <w-row>
-        <w-col :span="12">
-          <w-skeleton :proportion="0.2"></w-skeleton>
+        <w-col :span='12'>
+          <w-skeleton :proportion='0.2'></w-skeleton>
         </w-col>
-        <w-col :span="24" class="m-10">
-          <w-skeleton :proportion="0.1"></w-skeleton>
+        <w-col :span='24' class='m-10'>
+          <w-skeleton :proportion='0.1'></w-skeleton>
         </w-col>
-        <w-col :span="24" class="m-10">
-          <w-skeleton :proportion="0.1"></w-skeleton>
+        <w-col :span='24' class='m-10'>
+          <w-skeleton :proportion='0.1'></w-skeleton>
         </w-col>                  
       </w-col>  
     </w-col>
@@ -52,7 +52,7 @@
 常见的骨架屏实现方案有```ssr```服务端渲染和```prerender```两种解决方案。这里的组件只是一个很简单的样式而已，最核心的还是他的思想，下面我会用代码介绍两种骨架屏的思想和实现方式：
 
 #### prerender 渲染骨架屏
-本组件库骨架屏的实现也是基于预渲染去实现的，有关于预渲染更详细的介绍请参考这篇文章：<a href="https://zhuanlan.zhihu.com/p/29148760">处理 Vue 单页面 Meta SEO的另一种思路</a>
+本组件库骨架屏的实现也是基于预渲染去实现的，有关于预渲染更详细的介绍请参考这篇文章：<a href='https://zhuanlan.zhihu.com/p/29148760'>处理 Vue 单页面 Meta SEO的另一种思路</a>
 下面我们主要介绍其实现步骤，首先我们也是需要配置webpack-plugin，不过已经有实现好的[prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin)可用
 ```js
 var path = require('path')
@@ -74,17 +74,17 @@ module.exports = {
 然后写好我们的骨架屏文件```main.skeleton.vue```
 ```html
 <template>
-  <div class="main-skeleton">
-    <w-skeleton height="80px"></w-skeleton>
+  <div class='main-skeleton'>
+    <w-skeleton height='80px'></w-skeleton>
     <div>
-      <div class="skeleton-container">
-        <div class="skeleton">
-          <w-skeleton height="300px"></w-skeleton>
+      <div class='skeleton-container'>
+        <div class='skeleton'>
+          <w-skeleton height='300px'></w-skeleton>
         </div>
-        <w-skeleton height="45px"></w-skeleton>
+        <w-skeleton height='45px'></w-skeleton>
       </div>
-      <div class="skeleton-bottom">
-        <w-skeleton height="45px"></w-skeleton>
+      <div class='skeleton-bottom'>
+        <w-skeleton height='45px'></w-skeleton>
       </div>
     </div>
   </div>
@@ -95,10 +95,10 @@ module.exports = {
 
 ```html
 <template>
-  <div id="app">
-    <mainSkeleton v-if="!init"></mainSkeleton>
+  <div id='app'>
+    <mainSkeleton v-if='!init'></mainSkeleton>
     <div v-else>
-      <div class="body"></div>
+      <div class='body'></div>
     </div>
   </div>
 </template>
@@ -128,7 +128,7 @@ module.exports = {
 
 #### ssr 渲染骨架屏
 下面我用我灵魂画师的笔法，画出了大致的过程：
-<img src="../assets/img/skeleton.png" width="100%">
+<img src='../assets/img/skeleton.png' width='100%'>
 
 首先创建我们的```skeleton.entry.js```
 
@@ -146,9 +146,9 @@ export default new Vue({
 当然这里的```skeleton.vue```使我们事先写好的骨架屏组件，看起来可能是这样：
 ```html
 <template>
-    <div class="skeleton-wrapper">
-        <header class="skeleton-header"></header>
-        <div class="skeleton-block"></div>
+    <div class='skeleton-wrapper'>
+        <header class='skeleton-header'></header>
+        <div class='skeleton-block'></div>
     </div>
 </template>
 ```
@@ -174,7 +174,7 @@ module.exports = merge(baseWebpackConfig, {
         libraryTarget: 'commonjs2'
     }),
     externals: nodeExternals({
-        whitelist: /\.css$/
+        whitelist: /.css$/
     }),
     plugins: []
 });
@@ -230,7 +230,7 @@ module.exports = merge(baseWebpackConfig, {
 
             // insert inlined styles into html
             var headTagEndPos = htmlPluginData.html.lastIndexOf('</head>');
-            htmlPluginData.html = insertAt(htmlPluginData.html, ("<style>" + skeletonCss + "</style>"), headTagEndPos);
+            htmlPluginData.html = insertAt(htmlPluginData.html, ('<style>' + skeletonCss + '</style>'), headTagEndPos);
 
             // replace mounted point with ssr result in html
             var appPos = htmlPluginData.html.lastIndexOf(insertAfter) + insertAfter.length;

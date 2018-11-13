@@ -2,6 +2,8 @@ var config = require('../config')
 if (!process.env.NODE_ENV) process.env.NODE_ENV = config.dev.env
 var path = require('path')
 var express = require('express')
+var routes = require('../route/index');
+var bodyParser = require('body-parser')
 var webpack = require('webpack')
 var fs = require('fs')
 var ejs = require('ejs')
@@ -20,6 +22,10 @@ Object.keys(proxyTable).forEach(function (context) {
   }
   app.use(proxyMiddleware(context, options))
 })
+
+
+app.use(bodyParser.urlencoded({extended:false}))//接受form表单提交的数据
+app.use(bodyParser.json())//接受json数据格式提交的数据
 
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.engine('html',ejs.__express);
@@ -43,6 +49,12 @@ app.get('/express/abc', function (req, res) {
 app.get('/', function (req, res) {
   res.render('index')
 });
+//接口路由
+app.get('/getLeftNav',routes.getLeftNav)
+app.post('/add',routes.add)
+app.post('/getComponentByType',routes.getComponentByType)
+app.post('/getComponentByName',routes.getComponentByName)
+app.post('/updateComponent',routes.updateComponent)
 
 //get方式返回json数据
 app.get('/data/:page/:file', function (req, res) {

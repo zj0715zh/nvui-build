@@ -12,6 +12,9 @@ import MetaInfo from './meta-info/index'
 import WAlert from './alert/index'
 import WLoadingBar from './loading-bar/index'
 import Skeleton from './skeleton/index'
+import WInput from './input/index'
+import WToast from './toast/index'
+import WDialog from './dialog/index'
 
 const components = [
   WButton,
@@ -21,13 +24,16 @@ const components = [
   WShowMore,
   WLimitTextArea,
   WAlert,
-  Skeleton
+  Skeleton,
+  WInput,
+  WDialog
 ]
 
 const install = function(Vue) {
   if (install.installed) return
   components.map(component => Vue.component(component.name, component))
   MetaInfo.install(Vue)
+  Vue.prototype.$toast = WToast
   Vue.prototype.$loading = WLoadingBar
 }
 
@@ -46,5 +52,8 @@ export default {
   MetaInfo,
   WAlert,
   WLoadingBar,
-  Skeleton
+  Skeleton,
+  WInput,
+  WToast,
+  WDialog
 }

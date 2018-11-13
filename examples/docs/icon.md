@@ -9,7 +9,7 @@
     }
   }
 </script>
-<style lang="less">
+<style lang='less'>
   .demo-icon .source > i {
     font-size: 24px;
     color: #8492a6;
@@ -62,36 +62,36 @@
   }
 </style>
 
-# Icon 图标
+# Icon 图标  <a href='#/update?name=icon'>编辑</a>
 
 ----
 语义化的矢量图形，```NV-UI``` 使用开源的 Iconfont (阿里妈妈MUX倾力打造的矢量图标管理、交流平台) 作为图标库，并制作成了 ```icon font```。
 ### 如何使用
 
-使用 ```class="icon"``` 来声明图标，具体图标的名称请 ```copy``` 相应的标签
+使用 ```class='icon'``` 来声明图标，具体图标的名称请 ```copy``` 相应的标签
 
-<div class="demo-block">
-  <i class="w-icon-close fs-24"></i>
-  <i class="w-icon-link fs-24"></i>
-  <i class="w-icon-tag fs-24"></i>
-  <i class="w-icon-smile fs-24"></i>
+<div class='demo-block'>
+  <i class='w-icon-close fs-24'></i>
+  <i class='w-icon-link fs-24'></i>
+  <i class='w-icon-tag fs-24'></i>
+  <i class='w-icon-smile fs-24'></i>
 </div>
 
 ::: demo
 ```html
 
-<i class="w-icon-close fs-24"></i>
-<i class="w-icon-link fs-24"></i>
-<i class="w-icon-tag fs-24"></i>
-<i class="w-icon-smile fs-24"></i>
+<i class='w-icon-close fs-24'></i>
+<i class='w-icon-link fs-24'></i>
+<i class='w-icon-tag fs-24'></i>
+<i class='w-icon-smile fs-24'></i>
 
 ```
 :::
 
 ### 图标示例
 
-<ul class="icon-list">
-  <li v-for="name in icons" :key="name">
+<ul class='icon-list'>
+  <li v-for='name in icons' :key='name'>
     <span>
       <i :class="'w-' + name"></i>
       {{'w-' + name}}

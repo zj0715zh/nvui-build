@@ -66,12 +66,14 @@
 </template>
 
 <script>
-  import navConf from '../nav.config.json'
+  import navConf from '../leftNavConfig.json'
   export default {
     data () {
       return {
         data: navConf
       }
+    },
+    created () {
     }
   }
 </script>

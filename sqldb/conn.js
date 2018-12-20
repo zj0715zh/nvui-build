@@ -1,6 +1,6 @@
 var mysql = require('mysql')
 var db_name = 'nvui'; //数据库名称
-var db_host = '10.113.31.245'; //数据库地址
+var db_host = '47.99.204.170'; //数据库地址
 var db_port = '3306'; // 数据库端口
 var username = 'root'; //用户AK
 var password = ''; //用户SK

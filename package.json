@@ -16,7 +16,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "body-parser": "^1.15.0",
     "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.5.7",

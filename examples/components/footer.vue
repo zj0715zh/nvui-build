@@ -32,10 +32,10 @@
       <w-row type="flex" justify="space-between">
         <w-col :span="12" class="text-left">
           <a href="javascript:;">
-            <img src="https://avatar.csdn.net/2/1/E/3_itkingone.jpg" width="80">
+            <img src="../assets/img/logo.png" width="80">
           </a>
           <div>
-            <p>author: tizou</p>
+            <p>author: itzou</p>
             <p>email: 364778792@qq.com </p>
             <p>github: <a href="https://github.com/zj0715zh/nvui.git">https://github.com/zj0715zh/nvui.git</a></p>
           </div>

@@ -63,9 +63,10 @@ function getLeftSideNav(){
         });
     })
 }
+//本地开发，数据库丢失的话可以暂时注销
+// getComponents()
+// getLeftSideNav()
 
-getComponents()
-getLeftSideNav()
 //接口路由
 exports.getLeftNav = function(req,res){
 	var responseDate = {code:0,msg:'success',content:{}};
